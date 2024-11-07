@@ -337,7 +337,7 @@ class FTP extends Model {
     }
     toAbsolute(value, ftp) {
         const self = this;
-        if(value < self.minAbsValue) return parseInt(value * ftp);
+        if(value < self.minAbsValue) return Math.round(value * ftp);
         return value;
     }
     powerToZone(value, ftp, zones) {
